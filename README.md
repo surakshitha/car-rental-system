@@ -1,4 +1,4 @@
-# Car Rental System
+# Car Rental System - GO CARS
 
 This repo contains all the code for Car rental database management System where in you can Rent the available cars.
 It has two types of user - Admin and a Customer.
