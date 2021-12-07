@@ -1,0 +1,247 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  font-size: 120%;
+  background: #f8f8ff;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  text-align: center;
+}
+
+.company-header {
+  margin-top: 50px;
+}
+
+.header {
+  position: relative;
+  width: 30%;
+  margin: 50px auto 0px;
+  color: white;
+  background: black;
+  text-align: center;
+  border: 1px solid #b0c4de;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 10px 20px;
+}
+
+.text-white {
+  color: white;
+}
+
+form,
+.content {
+  width: 30%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #b0c4de;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.input-group {
+  margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+.input-group input {
+  height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: darkslategrey;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 150px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.error {
+  width: 92%;
+  margin: 0px auto;
+  padding: 10px;
+  border: 1px solid #a94442;
+  color: #a94442;
+  background: #f2dede;
+  border-radius: 5px;
+  text-align: left;
+}
+.success {
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+}
+.details {
+  width: 70% !important;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #b0c4de;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.btn-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+
+  /*Button disabled - CSS color class*/
+  color: #c0c0c0;
+  background-color: #ffffff;
+}
+
+.center-horizontally {
+  display: flex;
+  justify-content: center;
+}
+
+.login-signup-btn {
+  margin: 20px;
+}
+
+.login-signup-btn > .btn {
+  margin: 10px;
+}
+
+.admin-btn-wrapper {
+  align-items: center;
+}
+
+.admin-btn {
+  margin-left: 10px;
+}
+
+.register-btn {
+  margin: 20px;
+}
+
+.admin-view-btn {
+  margin: 10px;
+}
+
+.admin-view-btn-wrapper {
+  margin: 20px auto 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-vertically {
+  align-items: center;
+}
+
+.car-details-wrapper {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.car-details {
+  width: 30%;
+}
+
+.car-image {
+  margin: 10px auto;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 20px;
+}
+
+/* CSS Reset for car animation */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Track Styling and positioning */
+.track {
+  background-image: url("../images/track.jpeg");
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 0px;
+  width: 1000vw;
+  height: 15vh;
+  animation: trackanimation 6s linear infinite;
+}
+
+/* Car Styling and positioning */
+.car {
+  background-image: url("../images/car-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 17rem;
+  height: 4.699rem;
+  position: absolute;
+  bottom: 77px;
+  left: 396px;
+}
+
+/* Wheel's Styling and positioning */
+.wheel {
+  position: absolute;
+  animation: wheelanimation linear 0.6s infinite;
+}
+.wheel1 {
+  background-image: url("../images/wheel1-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 46px;
+  height: 49px;
+  bottom: 71px;
+  left: 570px;
+}
+.wheel2 {
+  background-image: url("../images/wheel2-removebg-preview.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 44px;
+  bottom: 77px;
+  left: 433px;
+}
+
+/* Rotation of the wheels */
+@keyframes wheelanimation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Moving the track backwards */
+@keyframes trackanimation {
+  100% {
+    transform: translate(-500vw);
+  }
+}
