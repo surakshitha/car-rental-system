@@ -46,7 +46,7 @@
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['email'])) : ?>
-    	<p>Congrats <strong><?php echo $_SESSION['email']; ?></strong></p>
+    	<p>Congrats <strong><?php echo $_SESSION['userName']; ?></strong></p>
 		<p>Booking Confirmed</p>
 		<p class="center-horizontally" style="margin-top: 20px"> 
 			<a href="index.php" class="btn">Home</a>
