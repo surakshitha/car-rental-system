@@ -11,6 +11,7 @@
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
+	unset($_SESSION['userName']);
   	unset($_SESSION['email']);
   	header("location: login.php");
   }
@@ -48,8 +49,8 @@
   	<?php endif ?>
 
     <!-- logged in user information -->
-    <?php  if (isset($_SESSION['email'])) : ?>
-    	<p class="center-horizontally">Welcome &nbsp;<strong><?php echo $_SESSION['email']; ?></strong></p>
+    <?php  if (isset($_SESSION['userName'])) : ?>
+    	<p class="center-horizontally">Welcome &nbsp;<strong><?php echo $_SESSION['userName']; ?>!</strong></p>
 			<br />
 		<p class="center-horizontally"><strong>Select any of the cars from below to rent</strong></p>
 		<br />

@@ -9,10 +9,10 @@
 	<?php include('companyHeader.php'); ?>
 
   <div class="header">
-  	<h2>Registration</h2>
+  	<h2>User Sign Up</h2>
   </div>
 	
-  <form method="post" action="registration.php">
+  <form method="post" action="signUp.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
   	  <label>First Name</label>

@@ -25,7 +25,7 @@ $return_date = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', 'password', 'carrental');
+$db = mysqli_connect('localhost', 'root', 'Jenn@1410', 'carrental');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -66,6 +66,7 @@ if (isset($_POST['reg_user'])) {
   	$query = "INSERT INTO users (firstName, lastName, email, phoneNumber, state, city, password) 
   			  VALUES('$firstName', '$lastName', '$email', '$phoneNumber', '$state', '$city', '$password')";
   	mysqli_query($db, $query);
+    $_SESSION['userName'] = $firstName;
   	$_SESSION['email'] = $email;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: index.php');
@@ -213,6 +214,8 @@ if (isset($_POST['login_user'])) {
         $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
+          $row = $results->fetch_row();
+          $_SESSION['userName'] = $row[1];
           $_SESSION['email'] = $email;
           $_SESSION['success'] = "You are now logged in";
 		  $query = "SELECT * FROM cars";

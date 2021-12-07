@@ -1,0 +1,9 @@
+CREATE TABLE cars
+(
+  car_id INT PRIMARY KEY AUTO_INCREMENT,
+  car_name VARCHAR(50) NOT NULL,
+  car_pic VARCHAR(200),
+  car_info TEXT,
+  car_stock INT NOT NULL,
+  car_rate INT NOT NULL
+);

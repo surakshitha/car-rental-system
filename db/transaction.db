@@ -1,0 +1,25 @@
+CREATE TABLE transaction
+(
+  transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  car_id INT NOT NULL,
+  time TIMESTAMP NOT NULL DEFAULT NOW(),
+  return_date DATE NOT NULL DEFAULT NOW(),
+  value INT NOT NULL,
+  CONSTRAINT transaction_user_id_fk FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT transaction_car_id_fk FOREIGN KEY (car_id) REFERENCES cars (car_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TRIGGER STOCK_UPDATE_DECREASE
+AFTER INSERT
+  ON transaction FOR EACH ROW
+  BEGIN
+    UPDATE cars SET car_stock = car_stock - 1 WHERE car_id = NEW.car_id
+  END;
+
+CREATE TRIGGER STOCK_UPDATE_INCREASE
+AFTER DELETE
+  ON transaction FOR EACH ROW
+  BEGIN
+    UPDATE cars SET car_stock = car_stock + 1 WHERE car_id = OLD.car_id;
+  END;
