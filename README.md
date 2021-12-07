@@ -1,16 +1,16 @@
 # _Car Rental System - GO CARS_ 🚗
 
-This repository includes code for Car rental management system that allows one to rent any of the available cars in teh catalog.
-It primarli has two users - _Admin_ and _Customer_.
-The Admin can add and remove cars to be rented, while the customers can rent car(s), make payment(s) and view the rental catalog in the system.
+This repository includes code for Car rental management system that allows one to rent any of the available cars in the catalog.
+It primarliy has two users - _Admin_ and _Customer_.
+The Admin can add and remove cars to be rented, while the customers can view the rental catalog, rent car(s) and make payment(s).
 
 
 # _Objective:_ 
-Develop an easy-to-use web-based system that allows customers to register and reserve car online.
-Serves people in multiple use-cases :
+Develop an easy-to-use web-based system that allows customers to register and reserve car(s) online.
+It serves various use-cases:
 * Who don’t own a car yet
 * Who can’t afford a car 
-* Who are out of town 
+* Who are out of town and intend to travel farther in car
 * Whose cars are damaged or don’t run anymore
 # _Benefits:_
 * Reduces the time, money and labor involved in traditional rental procedures.
@@ -25,5 +25,6 @@ Serves people in multiple use-cases :
 * As a Customer, I should be able to view the car rental catalog on my dashboard.
 * As a Customer, I should be able to rent a car.
 * As a Customer, when I rent a car, I should be able to see the car rental quantity update after a successful rental. 
+* As an Admin, when I try to add a car with a name that is already existing in the system, I should see an error message. 
 
 
