@@ -1,3 +1,3 @@
 <h1 class="center-horizontally company-header">
-  Zip Cars
+  Go Cars
 </h1>
